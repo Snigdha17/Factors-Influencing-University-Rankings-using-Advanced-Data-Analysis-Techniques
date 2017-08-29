@@ -14,3 +14,8 @@ Enter the following command into the command line:
 > python -m SimpleHTTPServer 8000
 
 This command creates a local host at port 8000. Simply open this port in your favourite web-browser by navigating to localhost:8000 and click on assignment2.html to view the project.
+
+Here is a demo of the project in action:
+
+[Demo](https://drive.google.com/file/d/0B8Omi2LJI-H2S3RZeDBZNFpJYXM/view?usp=sharing)
+
