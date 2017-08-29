@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<style>
+.axis path,
+.axis line {
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
+}
+
+.axis text {
+    font-family: sans-serif;
+    font-size: 11px;
+}
+
+.loading {
+    font-family: sans-serif;
+    font-size: 15px;
+}
+
+.circle {
+    fill: #222;
+}
+
+ /* Style the tab */
+div.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    font-weight: 700px;
+}
+
+/* Style the buttons inside the tab */
+div.tab button {
+    background-color: #414141;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.2s;
+    font-weight: 700px;
+
+
+
+}
+
+/* Change background color of buttons on hover */
+div.tab button:hover {
+    background-color: #A9A9A9;
+}
+
+/* Create an active/current tablink class */
+div.tab button.active {
+    background-color: Navy;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+    font-weight: 700px;
+}
+
+.legend rect {
+  fill:white;
+  stroke:black;
+  opacity:0.8;}
+
+</style>
+<html lang="en">
+
+<head>
+    <h2 align = "center"><font color="teal"> Visualization Assignment: Lab2</font></h2>
+    <meta charset="utf-8">
+    <title>Visualization-Lab 2</title>
+    <h3 align = "center"><font color="darkslateblue"> Analysing the data from admission criteria of top 1000 universities in the world</font></h3>
+    <script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="scatterplot.js"></script>
+
+    <div class="tab">
+      <button class="tablinks" onclick="plot_values('pca_output.csv')" style = "width:20%"><font color = "white"><b>PCA</b></font></button>
+      <button class="tablinks" onclick="plot_values('correlation.csv')" style = "width:20%"><font color = "white"><b>MDS CORRELATION</b></font></button>
+        <button class="tablinks" onclick="plot_values('euclidean.csv')" style = "width:20%"><font color = "white"><b>MDS EUCLIDEAN</b></font></button>
+        <button class = "tablinks" onclick="location.href = 'demo.html';"  style = "width:20%"><font color = "white"><b>SCATTER-MATRIX</b></font></button>
+        <button class="tablinks" onclick = "location.href = 'images.html';" style = "width:20%"><font color = "white"><b>SUPPORTING GRAPHS</b></font></button>
+    </div>
+
+
+    <div id  = "scatter_plot"></div>
+
+    <script type="text/javascript">
+
+    var w = 950;
+    var h = 400;
+    var pad = 50;
+    var left_pad = 150;
+
+
+    document.getElementById("scatter_plot").innerHTML = "";
+
+    var xScale = d3.scale.linear().range([left_pad, w-pad]);
+    var xAxis = d3.svg.axis().scale(xScale).orient("bottom");
+
+    var yScale = d3.scale.linear().range([pad, h-pad*2]);
+    var yAxis = d3.svg.axis().scale(yScale).orient("left");
+
+
+    var svg = d3.select("#scatter_plot")
+                .append("svg")
+                .attr("width", w)
+                .attr("height", h);
+
+</script>
+
+</head>
+<body style = "background-color: #CCDFCB">
+
+
+
+</body>
+
+</html>

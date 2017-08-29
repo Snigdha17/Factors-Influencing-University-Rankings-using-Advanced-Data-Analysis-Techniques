@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.imgdisplay {
+    width:100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.imgContainer{
+    float:left;
+}
+
+body{margin-left:50px;}
+
+</style>
+
+<h2 align = "center"><font color="teal">Visualization Assignment: Lab2</font></h2>
+    <meta charset="utf-8">
+    <title>Visualization-Lab 2</title>
+</head>
+<body>
+
+<h3><font color = "darkslateblue">Elbow Plot for K-Means</font></h3>
+<img src="Results/Kmeans_elbow.png" alt="Kmeans_elbow" style="float: left; width: 450px;height:300px; margin-right: 1%; margin-bottom: 0.5em;">
+<p style = "clear: both">The plot below shows the optimum value of number of clusters (K) for performing stratified sampling using Kmeans</p>
+<p> The cluster size will be 3 shown in the elbow plot </p>
+
+
+
+<h3><font color = "darkslateblue">Scree Plot for PCA after Random and Adaptive Sampling</font></h3>
+<img src="Results/ScreePlot_random.png" style="float: left; width: 300px;height: 250px; margin-right: 1%; margin-bottom: 0.5em;">
+<img src="Results/ScreePlot_adaptive.png" style="float: left; width:300px;height:250px; margin-right: 1%; margin-bottom: 0.5em;">
+<p style="clear: both;">The plot above shows the scree plot obtained after performing Principal Component Analysis on reduced dataset using - Random and Adaptive Sampling</p>
+<p style="clear: both;"> Following the rule of thumb, number of components = those with eigan values > 1. Hence, the intrinsic dimensionality of the dataset is 2 as shown.</p>
+
+
+<h3><font color = "darkslateblue">Cumulative variance explained by PCA components</font></h3>
+<img src="Results/cumulative_variance_random.png" style="float: left; width: 300px;height: 250px; margin-right: 1%; margin-bottom: 0.5em;">
+<img src="Results/cumulative_variance_adaptive.png" style="float: left; width:300px; height: 250px; margin-right: 1%; margin-bottom: 0.5em;">
+<p style="clear: both;">The plots above display the cumulative variance explained by each PC component - both for random and adaptive sampling</p>
+<p style="clear: both;"> The first two components are enough to explain around 95% of variance in the data</p>
+
+
+<h3><font color = "darkslateblue">Plot of Squared loadings versus attribute</font></h3>
+<img src="Results/top_three_random.png" style="float: left; width: 300px;height:250px; margin-right: 1%; margin-bottom: 0.5em;">
+<img src="Results/top_three_adaptive.png" style="float: left; width: 300px;height:250px; margin-right: 1%; margin-bottom: 0.5em;">
+<p style="clear: both;">The graphs above show the distribution of squared loadings versus the attributes present in the data set</p>
+<p style="clear: both;"> The top three attributes for random sampling are: <b>national rank, publications</b> and <b>quality of faculty</b> <br/>
+and the top three attributes for adaptive sampling are: <b>national rank, publications</b> and <b>influence</b>
+ </p>
+
+
+<body style = "background-color: #CCDFCB">
+</body >
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<style>
+/* Style the tab */
+div.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    font-weight: 700px;
+}
+
+/* Style the buttons inside the tab */
+div.tab button {
+    background-color: #414141;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.2s;
+    font-weight: 700px;
+
+
+
+}
+
+/* Change background color of buttons on hover */
+div.tab button:hover {
+    background-color: #A9A9A9;
+}
+
+/* Create an active/current tablink class */
+div.tab button.active {
+    background-color: Navy;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+    font-weight: 700px;
+}
+
+.pad{
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+</style>
+  <head>
+  <h2 class = "pad", align = "center"> <font color="teal"><b>Visualization Assignment: Lab2</b></font>
+
+  </h2>
+    <meta charset="utf-8">
+    <title>Visualization-Lab 2</title>
+
+
+    <div class = "tab">
+    <button class="tablinks" onclick="myfunc()" style = "width:50%"><font color = "white"><b>ADAPTIVE SAMPLING</b></font></button>
+    <button class="tablinks" onclick="myfunc2()" style = "width:50%"><font color = "white"><b>RANDOM SAMPLING</b></font></button>
+    </div>
+
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <link type="text/css" rel="stylesheet" href="scattermatrix/demo.css">
+    <link type="text/css" rel="stylesheet" href="scattermatrix/scatter-matrix.css">
+
+
+   <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="scattermatrix/scatter-matrix.js"></script>
+
+
+
+    <script type="text/javascript">
+    function myfunc(){
+      var sm = new ScatterMatrix('data/top_three_loadings_adaptive.csv');
+      sm.render();
+    }
+    </script>
+
+
+    <script type="text/javascript">
+    function myfunc2(){
+      var sm = new ScatterMatrix('data/top_three_loadings_random.csv');
+      sm.render();
+    }
+    </script>
+
+  </head>
+  <body style = "background-color: #CCDFCB">
+
+
+
+  </body >
+</html>
